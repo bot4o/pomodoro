@@ -115,7 +115,7 @@ namespace pomodoro_app
             btn_sbreak.BackColor = default;
             btn_lbreak.BackColor = default;
         }
-        private void btn_sbreak_Click(object sender, EventArgs e)
+        public void btn_sbreak_Click(object sender, EventArgs e)
         {
             TimerReset();
             b = true;
@@ -128,7 +128,7 @@ namespace pomodoro_app
             btn_sbreak.BackColor = Color.Black;
             btn_lbreak.BackColor = default;
         }
-        private void btn_lbreak_Click(object sender, EventArgs e)
+        public void btn_lbreak_Click(object sender, EventArgs e)
         {
             TimerReset();
             b = true;
@@ -174,7 +174,7 @@ namespace pomodoro_app
 
         private void timeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var f2 = new TimeSelect(w, sb, lb);
+            var f2 = new TimeSelect(this, w, sb, lb);
             f2.Show();
         }
     }

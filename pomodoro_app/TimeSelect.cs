@@ -8,6 +8,7 @@ using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace pomodoro_app
 {
@@ -16,29 +17,31 @@ namespace pomodoro_app
         private Work w;
         private ShortBrake sb;
         private LongBrake lb;
-        private Form1 f1 = new Form1();
+        private Form1 form1Instance;
 
-        public TimeSelect(Work work, ShortBrake shortBrake, LongBrake longBrake)
+        public TimeSelect(Form1 form1, Work work, ShortBrake shortBrake, LongBrake longBrake)
         {
             InitializeComponent();
             w = work;
             sb = shortBrake;
             lb = longBrake;
+            form1Instance = form1;
 
             textBox1.Text = work.Minutes.ToString();
             textBox2.Text = shortBrake.Minutes.ToString();
             textBox3.Text = longBrake.Minutes.ToString();
         }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
             if (IsValidInteger(textBox1.Text) && IsValidInteger(textBox2.Text) && IsValidInteger(textBox3.Text))
             {
                 w.Minutes = int.Parse(textBox1.Text);
                 sb.Minutes = int.Parse(textBox2.Text);
                 lb.Minutes = int.Parse(textBox3.Text);
-                //f1.btn_work_Click(sender, e);
-                //MessageBox.Show(w.Minutes.ToString());
+
+                // Trigger the btn_work_Click method in Form1
+                form1Instance.btn_work_Click(null, EventArgs.Empty);
             }
             else
             {
@@ -53,6 +56,4 @@ namespace pomodoro_app
             return int.TryParse(input, out parsedValue);
         }
     }
-
-
 }
