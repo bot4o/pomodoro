@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace pomodoro_app
+namespace pomodoro_app.Classes
 {
-    public class LongBrake
+    public class ShortBrake
     {
-        public int Minutes { get; set; } = 60;
+        public int Minutes { get; set; } = 15;
         public int Seconds { get; set; } = 0;
-        public Color Theme { get; set; } = Color.FromArgb(91, 33, 127);
+        public Color Theme { get; set; } = Color.FromArgb(33, 127, 83);
     }
-
 }

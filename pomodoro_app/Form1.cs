@@ -6,6 +6,7 @@ using System.Threading;
 using Microsoft.Win32.SafeHandles;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.Metrics;
+using pomodoro_app.Classes;
 
 namespace pomodoro_app
 {

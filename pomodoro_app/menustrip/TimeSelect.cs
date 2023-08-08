@@ -8,6 +8,7 @@ using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pomodoro_app.Classes;
 using static System.Windows.Forms.DataFormats;
 
 namespace pomodoro_app

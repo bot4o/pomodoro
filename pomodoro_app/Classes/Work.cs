@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace pomodoro_app
+namespace pomodoro_app.Classes
 {
     public class Work
     {
