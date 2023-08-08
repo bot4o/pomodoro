@@ -11,9 +11,12 @@ namespace pomodoro_app
 {
     public partial class Form1 : Form
     {
+        private bool isFullScreen = false;
+
+
         private bool togglebtn = false;
         private bool b = false;
-        private int counter = 1;
+        public int counter = 1;
         private int halfCounter = 1;
 
         private int totalCount = 8;
@@ -176,6 +179,12 @@ namespace pomodoro_app
         {
             var f2 = new TimeSelect(this, w, sb, lb);
             f2.Show();
+        }
+
+        private void longBrakeIntervalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var lbi = new LongBrakeIntervals();
+            lbi.Show();
         }
     }
 }

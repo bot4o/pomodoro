@@ -38,9 +38,6 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             viewToolStripMenuItem = new ToolStripMenuItem();
-            viewToolStripMenuItem1 = new ToolStripMenuItem();
-            fullscreenToolStripMenuItem = new ToolStripMenuItem();
-            toolsToolStripMenuItem1 = new ToolStripMenuItem();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             settingsToolStripMenuItem = new ToolStripMenuItem();
             timerToolStripMenuItem = new ToolStripMenuItem();
@@ -77,6 +74,8 @@
             labelTimer = new Label();
             timerCountdown = new System.Windows.Forms.Timer(components);
             labelCounter = new Label();
+            viewToolStripMenuItem1 = new ToolStripMenuItem();
+            fullscreenToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -163,25 +162,6 @@
             viewToolStripMenuItem.Size = new Size(39, 20);
             viewToolStripMenuItem.Text = "Edit";
             // 
-            // viewToolStripMenuItem1
-            // 
-            viewToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { fullscreenToolStripMenuItem, toolsToolStripMenuItem1 });
-            viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            viewToolStripMenuItem1.Size = new Size(44, 20);
-            viewToolStripMenuItem1.Text = "View";
-            // 
-            // fullscreenToolStripMenuItem
-            // 
-            fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
-            fullscreenToolStripMenuItem.Size = new Size(180, 22);
-            fullscreenToolStripMenuItem.Text = "Fullscreen";
-            // 
-            // toolsToolStripMenuItem1
-            // 
-            toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            toolsToolStripMenuItem1.Size = new Size(180, 22);
-            toolsToolStripMenuItem1.Text = "Tools";
-            // 
             // toolsToolStripMenuItem
             // 
             toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { settingsToolStripMenuItem });
@@ -200,13 +180,13 @@
             // 
             timerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { timeToolStripMenuItem, autoStartBreaksToolStripMenuItem, autoStartWorkToolStripMenuItem, longBrakeIntervalToolStripMenuItem });
             timerToolStripMenuItem.Name = "timerToolStripMenuItem";
-            timerToolStripMenuItem.Size = new Size(110, 22);
+            timerToolStripMenuItem.Size = new Size(180, 22);
             timerToolStripMenuItem.Text = "Timer";
             // 
             // timeToolStripMenuItem
             // 
             timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            timeToolStripMenuItem.Size = new Size(175, 22);
+            timeToolStripMenuItem.Size = new Size(180, 22);
             timeToolStripMenuItem.Text = "Time";
             timeToolStripMenuItem.Click += timeToolStripMenuItem_Click;
             // 
@@ -214,64 +194,69 @@
             // 
             autoStartBreaksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { enabledToolStripMenuItem, disabledToolStripMenuItem });
             autoStartBreaksToolStripMenuItem.Name = "autoStartBreaksToolStripMenuItem";
-            autoStartBreaksToolStripMenuItem.Size = new Size(175, 22);
+            autoStartBreaksToolStripMenuItem.Size = new Size(180, 22);
             autoStartBreaksToolStripMenuItem.Text = "Auto Start Breaks";
             // 
             // enabledToolStripMenuItem
             // 
             enabledToolStripMenuItem.Name = "enabledToolStripMenuItem";
-            enabledToolStripMenuItem.Size = new Size(119, 22);
+            enabledToolStripMenuItem.Size = new Size(180, 22);
             enabledToolStripMenuItem.Text = "Enabled";
             // 
             // disabledToolStripMenuItem
             // 
+            disabledToolStripMenuItem.Checked = true;
+            disabledToolStripMenuItem.CheckState = CheckState.Checked;
             disabledToolStripMenuItem.Name = "disabledToolStripMenuItem";
-            disabledToolStripMenuItem.Size = new Size(119, 22);
+            disabledToolStripMenuItem.Size = new Size(180, 22);
             disabledToolStripMenuItem.Text = "Disabled";
             // 
             // autoStartWorkToolStripMenuItem
             // 
             autoStartWorkToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { enableToolStripMenuItem, disableToolStripMenuItem });
             autoStartWorkToolStripMenuItem.Name = "autoStartWorkToolStripMenuItem";
-            autoStartWorkToolStripMenuItem.Size = new Size(175, 22);
+            autoStartWorkToolStripMenuItem.Size = new Size(180, 22);
             autoStartWorkToolStripMenuItem.Text = "Auto Start Work";
             // 
             // enableToolStripMenuItem
             // 
             enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            enableToolStripMenuItem.Size = new Size(112, 22);
+            enableToolStripMenuItem.Size = new Size(180, 22);
             enableToolStripMenuItem.Text = "Enable";
             // 
             // disableToolStripMenuItem
             // 
+            disableToolStripMenuItem.Checked = true;
+            disableToolStripMenuItem.CheckState = CheckState.Checked;
             disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            disableToolStripMenuItem.Size = new Size(112, 22);
+            disableToolStripMenuItem.Size = new Size(180, 22);
             disableToolStripMenuItem.Text = "Disable";
             // 
             // longBrakeIntervalToolStripMenuItem
             // 
             longBrakeIntervalToolStripMenuItem.Name = "longBrakeIntervalToolStripMenuItem";
-            longBrakeIntervalToolStripMenuItem.Size = new Size(175, 22);
+            longBrakeIntervalToolStripMenuItem.Size = new Size(180, 22);
             longBrakeIntervalToolStripMenuItem.Text = "Long Brake Interval";
+            longBrakeIntervalToolStripMenuItem.Click += longBrakeIntervalToolStripMenuItem_Click;
             // 
             // taskToolStripMenuItem
             // 
             taskToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { autoSwitchTasksToolStripMenuItem });
             taskToolStripMenuItem.Name = "taskToolStripMenuItem";
-            taskToolStripMenuItem.Size = new Size(110, 22);
+            taskToolStripMenuItem.Size = new Size(180, 22);
             taskToolStripMenuItem.Text = "Task";
             // 
             // autoSwitchTasksToolStripMenuItem
             // 
             autoSwitchTasksToolStripMenuItem.Name = "autoSwitchTasksToolStripMenuItem";
-            autoSwitchTasksToolStripMenuItem.Size = new Size(168, 22);
+            autoSwitchTasksToolStripMenuItem.Size = new Size(180, 22);
             autoSwitchTasksToolStripMenuItem.Text = "Auto Switch Tasks";
             // 
             // alarmSoundToolStripMenuItem
             // 
             alarmSoundToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { alarmSoundToolStripMenuItem1, tickingSoundToolStripMenuItem });
             alarmSoundToolStripMenuItem.Name = "alarmSoundToolStripMenuItem";
-            alarmSoundToolStripMenuItem.Size = new Size(110, 22);
+            alarmSoundToolStripMenuItem.Size = new Size(180, 22);
             alarmSoundToolStripMenuItem.Text = "Sound";
             // 
             // alarmSoundToolStripMenuItem1
@@ -283,20 +268,22 @@
             // 
             // defaultToolStripMenuItem
             // 
+            defaultToolStripMenuItem.Checked = true;
+            defaultToolStripMenuItem.CheckState = CheckState.Checked;
             defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            defaultToolStripMenuItem.Size = new Size(114, 22);
+            defaultToolStripMenuItem.Size = new Size(180, 22);
             defaultToolStripMenuItem.Text = "Default";
             // 
             // volumeToolStripMenuItem
             // 
             volumeToolStripMenuItem.Name = "volumeToolStripMenuItem";
-            volumeToolStripMenuItem.Size = new Size(114, 22);
+            volumeToolStripMenuItem.Size = new Size(180, 22);
             volumeToolStripMenuItem.Text = "Volume";
             // 
             // repeatToolStripMenuItem
             // 
             repeatToolStripMenuItem.Name = "repeatToolStripMenuItem";
-            repeatToolStripMenuItem.Size = new Size(114, 22);
+            repeatToolStripMenuItem.Size = new Size(180, 22);
             repeatToolStripMenuItem.Text = "Repeat";
             // 
             // tickingSoundToolStripMenuItem
@@ -308,21 +295,24 @@
             // 
             // noneToolStripMenuItem
             // 
+            noneToolStripMenuItem.Checked = true;
+            noneToolStripMenuItem.CheckState = CheckState.Checked;
             noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            noneToolStripMenuItem.Size = new Size(114, 22);
+            noneToolStripMenuItem.Size = new Size(180, 22);
             noneToolStripMenuItem.Text = "None";
             // 
             // volumeToolStripMenuItem1
             // 
             volumeToolStripMenuItem1.Name = "volumeToolStripMenuItem1";
-            volumeToolStripMenuItem1.Size = new Size(114, 22);
+            volumeToolStripMenuItem1.Size = new Size(180, 22);
             volumeToolStripMenuItem1.Text = "Volume";
             // 
             // themeToolStripMenuItem
             // 
             themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorThemesToolStripMenuItem, hourFormatToolStripMenuItem, darkModeWhenRunningToolStripMenuItem, smallWindowToolStripMenuItem });
+            themeToolStripMenuItem.Enabled = false;
             themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            themeToolStripMenuItem.Size = new Size(110, 22);
+            themeToolStripMenuItem.Size = new Size(180, 22);
             themeToolStripMenuItem.Text = "Theme";
             // 
             // colorThemesToolStripMenuItem
@@ -335,19 +325,19 @@
             // workToolStripMenuItem
             // 
             workToolStripMenuItem.Name = "workToolStripMenuItem";
-            workToolStripMenuItem.Size = new Size(134, 22);
+            workToolStripMenuItem.Size = new Size(180, 22);
             workToolStripMenuItem.Text = "Work";
             // 
             // shortBrakeToolStripMenuItem
             // 
             shortBrakeToolStripMenuItem.Name = "shortBrakeToolStripMenuItem";
-            shortBrakeToolStripMenuItem.Size = new Size(134, 22);
+            shortBrakeToolStripMenuItem.Size = new Size(180, 22);
             shortBrakeToolStripMenuItem.Text = "Short Brake";
             // 
             // longBrakeToolStripMenuItem
             // 
             longBrakeToolStripMenuItem.Name = "longBrakeToolStripMenuItem";
-            longBrakeToolStripMenuItem.Size = new Size(134, 22);
+            longBrakeToolStripMenuItem.Size = new Size(180, 22);
             longBrakeToolStripMenuItem.Text = "Long Brake";
             // 
             // hourFormatToolStripMenuItem
@@ -360,13 +350,13 @@
             // hourToolStripMenuItem
             // 
             hourToolStripMenuItem.Name = "hourToolStripMenuItem";
-            hourToolStripMenuItem.Size = new Size(116, 22);
+            hourToolStripMenuItem.Size = new Size(180, 22);
             hourToolStripMenuItem.Text = "12-hour";
             // 
             // hourToolStripMenuItem1
             // 
             hourToolStripMenuItem1.Name = "hourToolStripMenuItem1";
-            hourToolStripMenuItem1.Size = new Size(116, 22);
+            hourToolStripMenuItem1.Size = new Size(180, 22);
             hourToolStripMenuItem1.Text = "24-hour";
             // 
             // darkModeWhenRunningToolStripMenuItem
@@ -406,7 +396,7 @@
             // 
             // timerCountdown
             // 
-            timerCountdown.Interval = 1000;
+            timerCountdown.Interval = 1;
             timerCountdown.Tick += timerCountdown_Tick;
             // 
             // labelCounter
@@ -416,6 +406,20 @@
             labelCounter.Name = "labelCounter";
             labelCounter.Size = new Size(0, 14);
             labelCounter.TabIndex = 13;
+            // 
+            // viewToolStripMenuItem1
+            // 
+            viewToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { fullscreenToolStripMenuItem });
+            viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            viewToolStripMenuItem1.Size = new Size(44, 20);
+            viewToolStripMenuItem1.Text = "View";
+            // 
+            // fullscreenToolStripMenuItem
+            // 
+            fullscreenToolStripMenuItem.Enabled = false;
+            fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
+            fullscreenToolStripMenuItem.Size = new Size(127, 22);
+            fullscreenToolStripMenuItem.Text = "Fullscreen";
             // 
             // Form1
             // 
@@ -434,6 +438,7 @@
             ForeColor = SystemColors.ButtonHighlight;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            RightToLeft = RightToLeft.No;
             Text = "Pomodoro";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -452,7 +457,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem viewToolStripMenuItem;
-        private ToolStripMenuItem viewToolStripMenuItem1;
         private ToolStripMenuItem toolsToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem timerToolStripMenuItem;
@@ -487,10 +491,10 @@
         private ToolStripMenuItem enabledToolStripMenuItem1;
         private ToolStripMenuItem disabledToolStripMenuItem1;
         private ToolStripMenuItem smallWindowToolStripMenuItem;
-        private ToolStripMenuItem fullscreenToolStripMenuItem;
         private Label labelTimer;
         public System.Windows.Forms.Timer timerCountdown;
         private Label labelCounter;
-        private ToolStripMenuItem toolsToolStripMenuItem1;
+        private ToolStripMenuItem viewToolStripMenuItem1;
+        private ToolStripMenuItem fullscreenToolStripMenuItem;
     }
 }

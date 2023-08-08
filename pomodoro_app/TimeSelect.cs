@@ -65,5 +65,10 @@ namespace pomodoro_app
             form1Instance.btn_work_Click(null, EventArgs.Empty);
             this.Close();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
