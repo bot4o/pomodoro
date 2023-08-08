@@ -36,11 +36,12 @@
             label1 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
+            btn_Reset = new Button();
             SuspendLayout();
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(144, 77);
+            btnCancel.Location = new Point(104, 79);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(58, 23);
             btnCancel.TabIndex = 2;
@@ -49,7 +50,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(80, 77);
+            btnSave.Location = new Point(40, 79);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(58, 23);
             btnSave.TabIndex = 3;
@@ -105,11 +106,23 @@
             label2.TabIndex = 10;
             label2.Text = "Work";
             // 
+            // btn_Reset
+            // 
+            btn_Reset.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Reset.Location = new Point(168, 79);
+            btn_Reset.Name = "btn_Reset";
+            btn_Reset.Size = new Size(58, 23);
+            btn_Reset.TabIndex = 12;
+            btn_Reset.Text = "Reset";
+            btn_Reset.UseVisualStyleBackColor = true;
+            btn_Reset.Click += btn_Reset_Click;
+            // 
             // TimeSelect
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(274, 114);
+            Controls.Add(btn_Reset);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(textBox2);
@@ -134,5 +147,6 @@
         private Label label1;
         private TextBox textBox1;
         private Label label2;
+        private Button btn_Reset;
     }
 }

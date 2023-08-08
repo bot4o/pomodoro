@@ -136,7 +136,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, viewToolStripMenuItem, viewToolStripMenuItem1, toolsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, viewToolStripMenuItem, toolsToolStripMenuItem, viewToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(434, 24);
@@ -153,7 +153,7 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(93, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -173,13 +173,13 @@
             // fullscreenToolStripMenuItem
             // 
             fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
-            fullscreenToolStripMenuItem.Size = new Size(127, 22);
+            fullscreenToolStripMenuItem.Size = new Size(180, 22);
             fullscreenToolStripMenuItem.Text = "Fullscreen";
             // 
             // toolsToolStripMenuItem1
             // 
             toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            toolsToolStripMenuItem1.Size = new Size(127, 22);
+            toolsToolStripMenuItem1.Size = new Size(180, 22);
             toolsToolStripMenuItem1.Text = "Tools";
             // 
             // toolsToolStripMenuItem
@@ -193,7 +193,7 @@
             // 
             settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { timerToolStripMenuItem, taskToolStripMenuItem, alarmSoundToolStripMenuItem, themeToolStripMenuItem });
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(116, 22);
+            settingsToolStripMenuItem.Size = new Size(180, 22);
             settingsToolStripMenuItem.Text = "Settings";
             // 
             // timerToolStripMenuItem

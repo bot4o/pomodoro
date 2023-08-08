@@ -55,5 +55,15 @@ namespace pomodoro_app
             int parsedValue;
             return int.TryParse(input, out parsedValue);
         }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            w.Minutes = 25;
+            sb.Minutes = 15;
+            lb.Minutes = 60;
+
+            form1Instance.btn_work_Click(null, EventArgs.Empty);
+            this.Close();
+        }
     }
 }
