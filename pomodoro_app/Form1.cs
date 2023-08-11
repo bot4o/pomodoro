@@ -7,12 +7,16 @@ using Microsoft.Win32.SafeHandles;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.Metrics;
 using pomodoro_app.Classes;
+using System.Media;
 
 namespace pomodoro_app
 {
     public partial class Form1 : Form
     {
-        private bool isFullScreen = false;
+        //private SoundPlayer soundPlayer;
+
+        //private bool isFullScreen = false;
+        private bool autoStart = false;
 
 
         private bool togglebtn = false;
@@ -32,7 +36,10 @@ namespace pomodoro_app
 
         public Form1()
         {
+
             InitializeComponent();
+            /* soundPlayer = new SoundPlayer(@"C:\Users\User\pomodoro\pomodoro_app\root\sounds\Bell.wav");
+             soundPlayer.Play();*/
             this.currentMinutes = w.Minutes;
             this.currentSeconds = w.Seconds;
             btn_work.BackColor = Color.Black;
@@ -65,7 +72,12 @@ namespace pomodoro_app
             UpdateTimeLabel();
             if (currentMinutes == 0 && currentSeconds == 0)
             {
-
+                SystemSounds.Beep.Play();
+                if (this.WindowState == FormWindowState.Minimized)
+                {
+                    this.WindowState = FormWindowState.Normal;
+                    this.Activate();
+                }
                 timerCountdown.Stop();
                 if (counter == totalCount)
                 {
@@ -91,8 +103,10 @@ namespace pomodoro_app
                 {
                     btn_sbreak.PerformClick();
                 }
-
-
+                if (autoStart == true)
+                {
+                    timerCountdown.Start();
+                }
             }
             else if (currentSeconds == 0)
             {
@@ -186,6 +200,20 @@ namespace pomodoro_app
         {
             var lbi = new LongBrakeIntervals();
             lbi.Show();
+        }
+
+        private void autoStartBreaksToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (autoStart == false)
+            {
+                autoStart = true;
+                autoStartToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                autoStart = false;
+                autoStartToolStripMenuItem.Checked = false;
+            }
         }
     }
 }
