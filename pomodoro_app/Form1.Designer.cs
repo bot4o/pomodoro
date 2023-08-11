@@ -152,7 +152,7 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(93, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -173,7 +173,7 @@
             // 
             settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { timerToolStripMenuItem, taskToolStripMenuItem, alarmSoundToolStripMenuItem, themeToolStripMenuItem });
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(180, 22);
+            settingsToolStripMenuItem.Size = new Size(116, 22);
             settingsToolStripMenuItem.Text = "Settings";
             // 
             // timerToolStripMenuItem
@@ -186,7 +186,7 @@
             // timeToolStripMenuItem
             // 
             timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            timeToolStripMenuItem.Size = new Size(180, 22);
+            timeToolStripMenuItem.Size = new Size(175, 22);
             timeToolStripMenuItem.Text = "Time";
             timeToolStripMenuItem.Click += timeToolStripMenuItem_Click;
             // 
@@ -195,13 +195,13 @@
             autoStartBreaksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { enabledToolStripMenuItem, disabledToolStripMenuItem });
             autoStartBreaksToolStripMenuItem.Enabled = false;
             autoStartBreaksToolStripMenuItem.Name = "autoStartBreaksToolStripMenuItem";
-            autoStartBreaksToolStripMenuItem.Size = new Size(180, 22);
+            autoStartBreaksToolStripMenuItem.Size = new Size(175, 22);
             autoStartBreaksToolStripMenuItem.Text = "Auto Start Breaks";
             // 
             // enabledToolStripMenuItem
             // 
             enabledToolStripMenuItem.Name = "enabledToolStripMenuItem";
-            enabledToolStripMenuItem.Size = new Size(180, 22);
+            enabledToolStripMenuItem.Size = new Size(119, 22);
             enabledToolStripMenuItem.Text = "Enabled";
             // 
             // disabledToolStripMenuItem
@@ -209,7 +209,7 @@
             disabledToolStripMenuItem.Checked = true;
             disabledToolStripMenuItem.CheckState = CheckState.Checked;
             disabledToolStripMenuItem.Name = "disabledToolStripMenuItem";
-            disabledToolStripMenuItem.Size = new Size(180, 22);
+            disabledToolStripMenuItem.Size = new Size(119, 22);
             disabledToolStripMenuItem.Text = "Disabled";
             // 
             // autoStartWorkToolStripMenuItem
@@ -217,13 +217,13 @@
             autoStartWorkToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { enableToolStripMenuItem, disableToolStripMenuItem });
             autoStartWorkToolStripMenuItem.Enabled = false;
             autoStartWorkToolStripMenuItem.Name = "autoStartWorkToolStripMenuItem";
-            autoStartWorkToolStripMenuItem.Size = new Size(180, 22);
+            autoStartWorkToolStripMenuItem.Size = new Size(175, 22);
             autoStartWorkToolStripMenuItem.Text = "Auto Start Work";
             // 
             // enableToolStripMenuItem
             // 
             enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            enableToolStripMenuItem.Size = new Size(180, 22);
+            enableToolStripMenuItem.Size = new Size(112, 22);
             enableToolStripMenuItem.Text = "Enable";
             // 
             // disableToolStripMenuItem
@@ -231,13 +231,13 @@
             disableToolStripMenuItem.Checked = true;
             disableToolStripMenuItem.CheckState = CheckState.Checked;
             disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            disableToolStripMenuItem.Size = new Size(180, 22);
+            disableToolStripMenuItem.Size = new Size(112, 22);
             disableToolStripMenuItem.Text = "Disable";
             // 
             // longBrakeIntervalToolStripMenuItem
             // 
             longBrakeIntervalToolStripMenuItem.Name = "longBrakeIntervalToolStripMenuItem";
-            longBrakeIntervalToolStripMenuItem.Size = new Size(180, 22);
+            longBrakeIntervalToolStripMenuItem.Size = new Size(175, 22);
             longBrakeIntervalToolStripMenuItem.Text = "Long Brake Interval";
             longBrakeIntervalToolStripMenuItem.Click += longBrakeIntervalToolStripMenuItem_Click;
             // 
@@ -252,7 +252,7 @@
             // autoSwitchTasksToolStripMenuItem
             // 
             autoSwitchTasksToolStripMenuItem.Name = "autoSwitchTasksToolStripMenuItem";
-            autoSwitchTasksToolStripMenuItem.Size = new Size(180, 22);
+            autoSwitchTasksToolStripMenuItem.Size = new Size(168, 22);
             autoSwitchTasksToolStripMenuItem.Text = "Auto Switch Tasks";
             // 
             // alarmSoundToolStripMenuItem
@@ -267,7 +267,7 @@
             // 
             alarmSoundToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { defaultToolStripMenuItem, volumeToolStripMenuItem, repeatToolStripMenuItem });
             alarmSoundToolStripMenuItem1.Name = "alarmSoundToolStripMenuItem1";
-            alarmSoundToolStripMenuItem1.Size = new Size(180, 22);
+            alarmSoundToolStripMenuItem1.Size = new Size(149, 22);
             alarmSoundToolStripMenuItem1.Text = "Alarm Sound";
             // 
             // defaultToolStripMenuItem
@@ -294,7 +294,7 @@
             // 
             tickingSoundToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { noneToolStripMenuItem, volumeToolStripMenuItem1 });
             tickingSoundToolStripMenuItem.Name = "tickingSoundToolStripMenuItem";
-            tickingSoundToolStripMenuItem.Size = new Size(180, 22);
+            tickingSoundToolStripMenuItem.Size = new Size(149, 22);
             tickingSoundToolStripMenuItem.Text = "Ticking Sound";
             // 
             // noneToolStripMenuItem
@@ -414,7 +414,7 @@
             // 
             // timerCountdown
             // 
-            timerCountdown.Interval = 1;
+            timerCountdown.Interval = 1000;
             timerCountdown.Tick += timerCountdown_Tick;
             // 
             // labelCounter
